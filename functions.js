@@ -1,7 +1,6 @@
 
-const playerSelection = String(window.prompt("Write Rock, paper or sissors", ""));
 
-playRound(playerSelection,getComputerChoice())
+game()
 
 function getComputerChoice() {
     let randomNumber = Math.floor((Math.random() * 3));
@@ -76,5 +75,25 @@ function playRound (playerSelection, computerSelection) {
         default:
             console.log('Ingrese un valor correcto')
             break
+     }
+
+}
+
+function game() {        
+    let ganadorPlayer, resultado, ganadorPc
+    
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = String(window.prompt("Write Rock, paper or sissors", ""));
+        resutlado = playRound(playerSelection,getComputerChoice())
+        if (resultado === 1 ){
+            ganadorPlayer++;
+        }else if (resultado === 2){
+            ganadorPc++
+        }         
+     }
+     if( ganadorPlayer > ganadorPc) {
+        console.log('Has ganado la partida')
+     }else{
+        console.log('Has perdido la partida')
      }
 }
