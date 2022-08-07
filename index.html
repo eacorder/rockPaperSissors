@@ -6,9 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Papper Sissors</title>
     <script type="text/javascript" src="functions.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
- 
+<body> 
+    <div class="container">
+        <header class="header">
+            <h1>Rock, Paper, Scissors</h1>
+        </header>
+        <main class="content">
+            <div class="leftContent">
+                <div class="instructions">
+                     
+                        <p> Select Rock, Paper or Scissors to play against the PC. <br> 
+                         Prove your luck in 5 consecutive rounds. </p>
+                                      
+                    <button class="play">Play</button>
+                </div>
+                
+            </div>
+            <div class="rightContent">
+                <div class="results">
+                    <div class="resultsHeader">
+                        <h1>Games</h1>
+                    </div>
+                    <div class="resultsContent"> 
+                        <div class="resultsPlayer">
+                            <div class="playerScore">
+                                <img src="images/confused.png"  />
+                            </div>
+                            <span class="resultsTitle">Player </span>
+                        </div>
+                        <div class="resultsPlayer">
+                            <div class="pcScore">
+                                <img src="images/confused.png"  />
+                            </div>
+                            <span class="resultsTitle">PC </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="score">                     
+                    <div class="scoreHeader">
+                        <h1>Score</h1>
+                    </div>
+                    <div class="scoreContent"> 
+                         <div class="scoreContents"> 
+                            <div class="scoreHeaders">
+                                Player
+                            </div>
+                            <div class="scoreResult">
+                                4
+                            </div>
+                         </div>
+                         <div class="scoreContents"> 
+                            <div class="scoreHeaders">
+                                PC
+                            </div>
+                            <div class="scoreResult">
+                                4
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </main>    
+    </div>
+       
+       
 </body>
 </html>
