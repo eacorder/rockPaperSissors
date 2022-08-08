@@ -11,6 +11,7 @@ body, html, .container {
     display: none !important;
 }
 
+ 
 .header {
     display: flex;
     justify-content: center;
@@ -44,9 +45,7 @@ span {
 
 button {
     background-color: #626060;
-    color: white;
-    font-size: 22px;
-    font-weight: bolder; 
+    color: white; 
     font-family: 'Abril Fatface', cursive;
 
     

@@ -1,6 +1,5 @@
 
-
-//game()
+//variables declarations
 
 let round = 0;
 let resultPlayer = 0;
@@ -29,17 +28,23 @@ var btnModal = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+
+// begin rounds and show buttons paper scissors and rock
+
 btn.addEventListener('click', () => {
     instructions.classList.add('invisible'); 
     btns.classList.remove('invisible');
 
 });
+
+// play again button reload page 
 again.addEventListener('click', () => {
     location.reload() ;
 
 });
-sel.forEach((button) => {
-    // and for each one we add a 'click' listener
+
+//functionality of paper rock and scissor button
+sel.forEach((button) => { 
     button.addEventListener('click', () => {        
         
         playRoundResult = playRound(button.value ,getComputerChoice());
@@ -69,6 +74,8 @@ sel.forEach((button) => {
             resultMessage.innerHTML = "It's a draw!"
         }
 
+        //end game functionality when 5 rounds ends
+
         if ( round === 5  ) {
             if ( resultPlayer >  resultPc )
               {
@@ -93,6 +100,8 @@ sel.forEach((button) => {
     });
 });
 
+
+//set images for results on players and pc for each round 
 function imagesResults(playerChoice, computerChoice) {
     const imgPlayer = document.querySelector('.playerScoreImage ');
     const imgPc = document.querySelector('.pcScoreImage ');
@@ -117,12 +126,12 @@ function imagesResults(playerChoice, computerChoice) {
             break;
         case 'paper': 
             imgPc.src = "images/email.png"
-            break ;                
-        
+            break ;                    
     }
     
 }
 
+// functionality of random choice of paper rock and scissors 
 function getComputerChoice() {
     let randomNumber = Math.floor((Math.random() * 3));
     let computerChoice
@@ -140,40 +149,33 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-function playRound (playerSelection, computerSelection) { 
-    
+//compare player choice with computer choice and return 0 for draw 1 for win and 2 for lose
+function playRound (playerSelection, computerSelection) {     
    
     imagesResults(playerSelection ,computerSelection);
      switch (playerSelection.toLowerCase()) {
         case 'rock':
             switch(computerSelection.toLowerCase()){
                 case 'rock':
-                    console.log("it's a draw");
                     return 0 
                     break
                 case 'scissors':
-                    console.log("You Win! Rock beats Scissors");
                     return 1
                     break
                 case 'paper':
-                    console.log("You Lose! Paper beats Rock");
                     return 2 
-                    break                    
-                
+                    break                              
             }
         break
         case 'scissors':
             switch(computerSelection.toLowerCase()){
                 case 'rock':
-                    console.log("You Lose! Rock beats Sissors");    
                     return 2                
                     break
                 case 'scissors':
-                    console.log("it's a draw"); 
                     return 0    
                     break
                 case 'paper':
-                    console.log("You Win! Sissor beats Paper");
                     return 1   
                     break                    
                 
@@ -182,15 +184,12 @@ function playRound (playerSelection, computerSelection) {
         case 'paper':
             switch(computerSelection.toLowerCase()){
                 case 'rock':
-                    console.log("You Win! Paper beats Rock");
                     return 1   
                     break
                 case 'scissors':
-                    console.log("You Lose! Sissor beats Paper");
                     return 2    
                     break
                 case 'paper':
-                    console.log("it's a draw"); 
                     return 0   
                     break                    
                 
@@ -204,31 +203,7 @@ function playRound (playerSelection, computerSelection) {
 }
 
 
-
-
-function game() {        
-    let ganadorPlayer, resultado, ganadorPc
-    
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = String(window.prompt("Write Rock, paper or sissors", ""));
-        resutlado = playRound(playerSelection,getComputerChoice())
-        if (resultado === 1 ){
-            ganadorPlayer++;
-        }else if (resultado === 2){
-            ganadorPc++
-        }         
-     }
-     if( ganadorPlayer > ganadorPc) {
-        console.log('Has ganado la partida')
-     }else{
-        console.log('Has perdido la partida')
-     }
-}
-
-
 // modal functions 
-
-
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
