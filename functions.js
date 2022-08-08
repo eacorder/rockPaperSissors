@@ -2,7 +2,14 @@
 
 //game()
 
-
+let round = 0;
+let resultPlayer = 0;
+let resultPc = 0;
+let playRoundResult = 0
+const resultsHeader = document.querySelector('.resultsHeaderH ');
+const resultMessage = document.querySelector('.resultMessage ');
+const ending = document.querySelector('.ending ');
+const endingMessage = document.querySelector('.endingMessage ');
 const btn = document.querySelector('.play');
 const instructions = document.querySelector('.instructions ');
 const btns  = document.querySelector('.seleccion');
@@ -10,6 +17,7 @@ const roundNum  = document.querySelector('.roundNum');
 const playerNum  = document.querySelector('.playerNum');
 const pcNum  = document.querySelector('.pcNum');
 const sel = document.querySelectorAll('.selected');
+const again = document.querySelector('.again');
 
 //modal variables 
 // Get the modal
@@ -22,16 +30,14 @@ var btnModal = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 btn.addEventListener('click', () => {
-    instructions.classList.add('invisible');
+    instructions.classList.add('invisible'); 
     btns.classList.remove('invisible');
 
 });
-let round = 0;
-let resultPlayer = 0;
-let resultPc = 0;
-let playRoundResult = 0
-const resultsHeader = document.querySelector('.resultsHeaderH ');
-const resultMessage = document.querySelector('.resultMessage ');
+again.addEventListener('click', () => {
+    location.reload() ;
+
+});
 sel.forEach((button) => {
     // and for each one we add a 'click' listener
     button.addEventListener('click', () => {        
@@ -66,17 +72,23 @@ sel.forEach((button) => {
         if ( round === 5  ) {
             if ( resultPlayer >  resultPc )
               {
-                alert ( 'you win the game!' );
-                
+                endingMessage.innerHTML = `Congratulations!, you won the game!` 
+                btns.classList.add('invisible');
+                ending.classList.remove('invisible');
               }  
+              
             else  if ( resultPlayer < resultPc ) {
-                alert ( 'you lose the game!' );
+                endingMessage.innerHTML = "You lost, try again!" 
+                btns.classList.add('invisible');
+                ending.classList.remove('invisible');
             } else {
-                alert ( "It's a draw" );
+                endingMessage.innerHTML = "It's a draw game, try again!" 
+                btns.classList.add('invisible');
+                ending.classList.remove('invisible');
             }
              
         }
-        
+    
 
     });
 });
@@ -190,6 +202,9 @@ function playRound (playerSelection, computerSelection) {
      }
 
 }
+
+
+
 
 function game() {        
     let ganadorPlayer, resultado, ganadorPc
