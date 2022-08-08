@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Papper Sissors</title>
-    <script type="text/javascript" src="functions.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/rocks.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
@@ -18,30 +18,35 @@
         </header>
         <main class="content">
             <div class="leftContent">
-                <div class="instructions">
+                <div class="seleccion invisible">                
+                    <button value="rock" class="selected"><img class="btnImage" src="images/rocks.png"/></button>
+                    <button value="scissors" class="selected"><img class="btnImage" src="images/scissors.png"/></button>
+                    <button value="paper" class="selected"><img class="btnImage" src="images/email.png"/></button>
+                </div>
+                <div class="instructions "  >
                      
                         <p> Select Rock, Paper or Scissors to play against the PC. <br> 
                          Prove your luck in 5 consecutive rounds. </p>
                                       
-                    <button class="play">Play</button>
+                    <button class="play" >Play</button>
                 </div>
                 
             </div>
             <div class="rightContent">
                 <div class="results">
                     <div class="resultsHeader">
-                        <h1>Games</h1>
+                        <h1 class="resultsHeaderH">Rounds</h1>
                     </div>
                     <div class="resultsContent"> 
                         <div class="resultsPlayer">
                             <div class="playerScore">
-                                <img src="images/confused.png"  />
+                                <img class="playerScoreImage" src="images/confused.png"  />
                             </div>
                             <span class="resultsTitle">Player </span>
                         </div>
                         <div class="resultsPlayer">
                             <div class="pcScore">
-                                <img src="images/confused.png"  />
+                                <img class="pcScoreImage" src="images/confused.png"  />
                             </div>
                             <span class="resultsTitle">PC </span>
                         </div>
@@ -52,28 +57,48 @@
                         <h1>Score</h1>
                     </div>
                     <div class="scoreContent"> 
+                        <div class="scoreContents"> 
+                            <div class="scoreHeaders">
+                                Round #
+                            </div>
+                            <hr>
+                            <div class="scoreResult roundNum">
+                                
+                            </div>
+                         </div>
                          <div class="scoreContents"> 
                             <div class="scoreHeaders">
                                 Player
                             </div>
-                            <div class="scoreResult">
-                                4
+                            <hr>
+                            <div class="scoreResult playerNum">
+                                
                             </div>
                          </div>
                          <div class="scoreContents"> 
                             <div class="scoreHeaders">
                                 PC
                             </div>
-                            <div class="scoreResult">
-                                4
+                            <hr>
+                            <div class="scoreResult pcNum">
+                                 
                             </div>
                          </div>
                     </div>
                 </div>
             </div>
-        </main>    
+        </main>   
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p class="resultMessage"></p>
+            </div>
+          
+        </div> 
     </div>
-       
+    <script type="text/javascript" src="functions.js"></script>
        
 </body>
 </html>
