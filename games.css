@@ -1,0 +1,77 @@
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 30px;
+    text-align: center;      
+}
+
+img { 
+     width: 13vh;
+}
+span {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 22px;
+}
+
+.invisible {
+    display: none !important;
+}
+
+.header { 
+    background-color: black;
+    color: turquoise;
+    font-size: 32px; 
+}
+
+button {
+    background-color: #626060;
+    color: white; 
+    font-family: 'Abril Fatface', cursive;
+
+    width: 20vh;
+    height: 5vh; 
+    outline: 0;
+    grid-gap: 8px;
+    align-items: center;  
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: 8px;
+    justify-content: center;
+    line-height: 1.5;
+    overflow: hidden;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all .14s ease-out;
+    white-space: nowrap;   
+    font-size: 2vh;
+}
+
+button:hover {
+    box-shadow: 4px 4px 0 #000;
+    transform: translate(-4px,-4px);
+}
+
+button:focus-visible{
+    outline-offset: 1px;
+}
+
+.flexColumns {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRows {
+    display: flex;
+}
+
+.halfSpace {
+    flex: 1;
+}

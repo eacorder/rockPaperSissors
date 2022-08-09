@@ -9,98 +9,98 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <!-- general css for general components -->
+    <link rel="stylesheet" href="games.css">
+    <!-- css for specific elements -->
     <link rel="stylesheet" href="style.css">
+  
 </head>
 <body> 
-    <div class="container">
+    <div class="container flexColumns">
         <header class="header">
             <h1>Rock, Paper, Scissors</h1>
         </header>
-        <main class="content">
-            <div class="leftContent">
-                <div class="seleccion invisible">                
+        <main class="content flexRows halfSpace">
+            <!-- left side instructions / selection buttons / game ending message -->
+            <div class="leftContent flexRows halfSpace">
+                <div class="seleccion flexColumns invisible">                
                     <button value="rock" class="selected"><img class="btnImage" src="images/rocks.png"/></button>
                     <button value="scissors" class="selected"><img class="btnImage" src="images/scissors.png"/></button>
                     <button value="paper" class="selected"><img class="btnImage" src="images/email.png"/></button>
                 </div>
-                <div class="instructions "  >
-                     
-                        <p> Select Rock, Paper or Scissors to play against the PC. <br> 
-                         Prove your luck in 5 consecutive rounds. </p>
-                                      
+                <div class="instructions flexColumns"  >                     
+                    <p> Select Rock, Paper or Scissors to play against the PC. <br> 
+                        Prove your luck in 5 consecutive rounds. </p>                                      
                     <button class="play" >Play</button>
                 </div>
-                <div class="ending invisible"  >                     
+                <div class="ending invisible flexColumns"  >                     
                     <p class="endingMessage ">  </p>                                  
-                    <button class="again" >Play again!</button>
-                 
-                </div>
-                
+                    <button class="again" >Play again!</button>                 
+                </div>                
             </div>
-            <div class="rightContent">
-                <div class="results">
-                    <div class="resultsHeader">
-                        <h1 class="resultsHeaderH">Rounds</h1>
-                    </div>
-                    <div class="resultsContent"> 
-                        <div class="resultsPlayer">
-                            <div class="playerScore">
+
+            <!-- right side upper section  rounds and images of selected choices  -->
+            <div class="flexColumns halfSpace">
+                <div class="flexColumns halfSpace">                   
+                    <h1 class="resultsHeaderH">Rounds</h1>                 
+                    <div class="resultsContent flexRows"> 
+                        <div class="resultsPlayer halfSpace flexColumns ">
+                            <div class="playerScore flexRows halfSpace">
                                 <img class="playerScoreImage" src="images/confused.png"  />
                             </div>
-                            <span class="resultsTitle">Player </span>
+                            <span class="resultsTitle halfSpace">Player </span>
                         </div>
-                        <div class="resultsPlayer">
-                            <div class="pcScore">
+                        <div class="resultsPlayer halfSpace flexColumns">
+                            <div class="pcScore flexRows halfSpace">
                                 <img class="pcScoreImage" src="images/confused.png"  />
                             </div>
-                            <span class="resultsTitle">PC </span>
+                            <span class="resultsTitle halfSpace">PC </span>
                         </div>
                     </div>
                 </div>
-                <div class="score">                     
+
+                <!-- right side bottom section scores for each rounds adding up -->
+                <div class="score halfSpace">                     
                     <div class="scoreHeader">
                         <h1>Score</h1>
                     </div>
-                    <div class="scoreContent"> 
-                        <div class="scoreContents"> 
+                    <div class="scoreContent flexRows"> 
+                        <div class="scoreContents halfSpace"> 
                             <div class="scoreHeaders">
                                 Round #
                             </div>
                             <hr>
-                            <div class="scoreResult roundNum">
-                                
+                            <div class="scoreResult roundNum">                                
                             </div>
                          </div>
-                         <div class="scoreContents"> 
+                         <div class="scoreContents halfSpace"> 
                             <div class="scoreHeaders">
                                 Player
                             </div>
                             <hr>
-                            <div class="scoreResult playerNum">
-                                
+                            <div class="scoreResult playerNum">                                
                             </div>
                          </div>
-                         <div class="scoreContents"> 
+                         <div class="scoreContents halfSpace"> 
                             <div class="scoreHeaders">
                                 PC
                             </div>
                             <hr>
-                            <div class="scoreResult pcNum">
-                                 
+                            <div class="scoreResult pcNum">                                 
                             </div>
                          </div>
                     </div>
                 </div>
             </div>
         </main>   
-        <div id="myModal" class="modal">
 
+        <!-- Modal with result messages of every round -->
+        <div id="myModal" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
               <span class="close">&times;</span>
               <p class="resultMessage"></p>
-            </div>
-          
+            </div>          
         </div> 
     </div>
     <script type="text/javascript" src="functions.js"></script>

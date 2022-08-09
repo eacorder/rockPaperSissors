@@ -2,177 +2,38 @@ body, html, .container {
     margin: 0;
     height: 100%; 
 }
-.container{ 
-    display: flex;
-    flex-direction: column;
-}
 
-.invisible {
-    display: none !important;
-}
-
- 
-.header {
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    color: turquoise;
-    font-size: 32px;
-    letter-spacing: 1px;
-}
-
-h1 {
-    font-family: 'Abril Fatface', cursive;
-    text-align: center;
-    letter-spacing: 2px;
-}
-
-p {
-    font-size: 24px;
-    text-align: center;      
-}
-
-img { 
-     width: 150px;
-}
-span {
-    flex: 1;
-    font-family: 'Abril Fatface', cursive;
-    font-size: 22px;
-}
-
-
-
-button {
-    background-color: #626060;
-    color: white; 
-    font-family: 'Abril Fatface', cursive;
-
-    
-    outline: 0;
-    grid-gap: 8px;
-    align-items: center;  
-    border: 1px solid #000;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-flex;
-    flex-shrink: 0;
-    font-size: 16px;
-    gap: 8px;
-    justify-content: center;
-    line-height: 1.5;
-    overflow: hidden;
-    padding: 12px 16px;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    transition: all .14s ease-out;
-    white-space: nowrap;
-   
-
-}
-button:hover {
-    box-shadow: 4px 4px 0 #000;
-    transform: translate(-4px,-4px);
-}
-button:focus-visible{
-    outline-offset: 1px;
-}
-
-
-.btnImage {
-    padding: 20px;
-    width: 90px;
-}
-
-.play {
-    width: 200px;
-    height: 50px;
-   
-
-}
-
-.content {
-    display: flex;
-    justify-content:space-evenly;
-     
-}   
-
-
-.leftContent, .rightContent, .results , .score, .results, .score, .content{
-    flex:1;
-    
+.selected {
+    padding: 18px;
+    width: auto;
+    height: auto;
 }
 
 .leftContent {   
-    display: flex;
     background-color: turquoise;
     justify-content: center;
-    align-items: center; 
-    
+    align-items: center;     
     border-right-style: solid;
 }
 
-.seleccion {
-    display: flex;
-    flex-direction: column;
+.seleccion { 
     row-gap: 20px;
 }
 
-.instructions {   
-   display: flex;
-   flex-direction: column;   
-   justify-content: center;   
-   align-items: center;
-   
- 
+.instructions {       
+   align-items: center; 
 }
 
-.rightContent{
-    display: flex;
-    flex-direction: column;  
-    
-}
-
-
-.results{
-    display: flex;
-    flex-direction: column;
-    border-bottom-style: solid;
-   
+.resultsPlayer {    
+    align-items: center;  
      
 }
-.resultsHeader {
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-.resultsContent{
-    flex: 1;
-    display: flex; 
-      
-}
-
-.resultsPlayer {
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;  
-     
-}
-
 
 .playerScore , .pcScore{
     padding-left: 25px;
     padding-top: 50px;
-    flex: 1;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
 }
 
-
- 
 .score {
     background-color: black;
     color: white;
@@ -185,16 +46,10 @@ button:focus-visible{
 .scoreHeaders {
     text-align: center;
     font-size: 25px;
-
 }
  
 .scoreContent {
     font-family: 'Abril Fatface', cursive;
-    display: flex; 
-}
-
-.scoreContents {  
-    flex: 1;   
 }
 
 .scoreResult {  
@@ -203,17 +58,9 @@ button:focus-visible{
     font-size: 20px;
 }
 
-.ending {
-    display: flex;
-    flex-direction: column;
+.ending { 
     align-items: center;
 }
-
-.endingMessage  {
-    font-size: 30px; 
-    letter-spacing: 2px;
-}
-
 
 /* css for modal  */ 
 
